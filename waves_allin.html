@@ -1,114 +1,115 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Mitr:300,500,700,900" rel="stylesheet">
-  <style>
-    html {
-      font-size: 18px;
-      height: 100%;
-    }
-
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 99%;
-    }
-
-    .title {
-      color: indianred;
-      font-family: Mitr, sans-serif;
-      font-size: 12rem;
-      font-weight: 900;
-      mix-blend-mode: color-dodge;
-    }
-
-    .waves {
-      height: 10rem;
-      position: absolute;
-      margin-top: -2rem;
-      left: 0;
-      z-index: -1;
-      width: 100%;
-    }
-
-    /* Animation */
-
-    .parallax>use {
-      animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
-    }
-
-    .parallax>use:nth-child(1) {
-      animation-delay: -2s;
-      animation-duration: 16s;
-    }
-
-    .parallax>use:nth-child(2) {
-      animation-delay: -3s;
-      animation-duration: 12s;
-    }
-
-    .parallax>use:nth-child(3) {
-      animation-delay: -4s;
-      animation-duration: 19s;
-    }
-
-    .parallax>use:nth-child(4) {
-      animation-delay: -5s;
-      animation-duration: 5s;
-    }
-
-    .parallax>use:nth-child(5) {
-      animation-delay: -2s;
-      animation-duration: 3s;
-    }
-
-
-    @keyframes move-forever {
-      0% {
-        transform: translate3d(-90px, 0, 0);
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Mitr:300,500,700,900"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        font-size: 18px;
+        height: 100%;
       }
 
-      100% {
-        transform: translate3d(85px, 0, 0);
-      }
-    }
-
-    /* Shrinking for mobile */
-    @media (max-width: 768px) {
-      .waves {
-        height: 6rem;
-        margin-top: -1.5rem;
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 99%;
       }
 
       .title {
-        font-size: 8rem;
+        color: indianred;
+        font-family: Mitr, sans-serif;
+        font-size: 12rem;
+        font-weight: 900;
+        mix-blend-mode: color-dodge;
       }
-    }
-  </style>
-</head>
 
-<body>
+      .waves {
+        height: 10rem;
+        position: absolute;
+        margin-top: -2rem;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+      }
 
-  <div class="title">waves</div>
+      /* Animation */
 
-  <div class="sea">
-    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-      <defs>
-        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-      </defs>
-      <g class="parallax">
-        <use xlink:href="#gentle-wave" x="48" y="0" fill="#0f6bc5" />
-        <use xlink:href="#gentle-wave" x="48" y="3" fill="dodgerblue" />
-        <use xlink:href="#gentle-wave" x="48" y="6" fill="#6caeed" />
-        <use xlink:href="#gentle-wave" x="48" y="9" fill="#bde0fe" />
-        <use xlink:href="#gentle-wave" x="36" y="12" fill="aliceblue" />
-      </g>
-    </svg>
-  </div>
+      .parallax > use {
+        animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+      }
 
-</body>
+      .parallax > use:nth-child(1) {
+        animation-delay: -2s;
+        animation-duration: 15s;
+      }
 
+      .parallax > use:nth-child(2) {
+        animation-delay: -3s;
+        animation-duration: 11s;
+      }
+
+      .parallax > use:nth-child(3) {
+        animation-delay: -4s;
+        animation-duration: 8s;
+      }
+
+      .parallax > use:nth-child(4) {
+        animation-delay: -5s;
+        animation-duration: 5s;
+      }
+
+      @keyframes move-forever {
+        0% {
+          transform: translate3d(-90px, 0, 0);
+        }
+
+        100% {
+          transform: translate3d(85px, 0, 0);
+        }
+      }
+
+      /* Shrinking for mobile */
+      @media (max-width: 768px) {
+        .waves {
+          height: 6rem;
+          margin-top: -1.5rem;
+        }
+
+        .title {
+          font-size: 8rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="title">waves</div>
+
+    <div class="sea">
+      <svg
+        class="waves"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28"
+        preserveAspectRatio="none"
+        shape-rendering="auto"
+      >
+        <defs>
+          <path
+            id="gentle-wave"
+            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+          />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="#0f6bc5" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="dodgerblue" />
+          <use xlink:href="#gentle-wave" x="48" y="6" fill="#6caeed" />
+          <use xlink:href="#gentle-wave" x="48" y="9" fill="#bde0fe" />
+        </g>
+      </svg>
+    </div>
+  </body>
 </html>
